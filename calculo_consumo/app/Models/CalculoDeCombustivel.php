@@ -9,14 +9,19 @@ class CalculoDeCombustivel extends Model
 {
     use HasFactory;
 
+    
+    public function getCombustivel(){
+        return $_GET['combustivel'];
+    }
+
+
     public function calcular(){
 
+        $valorcombustivel = $_GET['valorcombustivel'];
         $distancia = $_GET['distancia'];
         $autonomia = $_GET['autonomia'];
 
-        $valorGasolina = 4.99;
-
-        $consumoGasolina = ($distancia / $autonomia ) * $valorGasolina;
+        $consumoGasolina = round(($distancia / $autonomia ) * $valorcombustivel,2);
 
         return $consumoGasolina;
 

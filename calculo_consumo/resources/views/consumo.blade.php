@@ -25,12 +25,22 @@
             <h2>Cálculo do valor (R$) do consumo</h2>
             <div class="conteudo-painel">
                 <form action="{{url('/gasto')}}" method="get">
+                    <label for="combustivel">Combusível</label>
+
+                    <select name="combustivel" id="">
+                        <option value="Gasolina" selected>Gasolina</option>
+                        <option value="Etanol">Etanol</option>
+                        <option value="Diesel">Diesel</option>
+                    </select>
+
+                    <label for="valorcombustivel">valor</label>
+                    <input type="number" name="valorcombustivel" step="0.01" id="">
 
                     <label for="distancia">Distância em Quilômetros a ser percorrida</label>
-                    <input type="number" class="campoTexto"  name="distancia" required/>
+                    <input type="number" class="campoTexto" step="0.01" name="distancia" required/>
 
                     <label for="autonomia">Consumo de combustível do veículo (Km/L)</label>
-                    <input type="number" class="campoTexto" name="autonomia" required/>
+                    <input type="number" class="campoTexto" step="0.01" name="autonomia" required/>
 
                     <button class="botao" type="submit">Calcular</button>
                 </form>

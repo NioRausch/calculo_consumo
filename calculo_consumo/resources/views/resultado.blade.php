@@ -14,7 +14,7 @@
             <div class='sucesso'>
                 <h3>O valor total gasto será de</h3>
                 <ul>
-                    <li><b>Gasolina:</b> R$ {{$valor}}</li>
+                    <li><b>{{$combustivel}}:</b> R$ {{$valor}}</li>
                 </ul>
             </div>
             <a class="botao" href="{{URL('/')}}" title="voltar">Voltar</a>
